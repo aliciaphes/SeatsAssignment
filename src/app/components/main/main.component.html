@@ -1,0 +1,38 @@
+
+<div style="text-align:center">
+  <h2>
+    Please select your seats
+  </h2>
+</div>
+
+
+<div>
+  <span *ngFor="let status of legend" style="margin-bottom: 10px">
+    <div class="legend seat" [style.background-color]="status.color"></div>
+    <div class="legend" style="margin-left: 10px">{{status.label}}</div>
+  </span>
+</div>
+
+
+
+<div style="margin-top: 30px;">
+    <span class="selected-seat-label">Selected seat: </span>
+    <div class="selected-seat-value">
+      {{this.currentlySelected.row}}{{this.currentlySelected.letter}}
+    </div>
+</div>
+
+<div *ngFor="let layout of planeLayoutToDraw" class="frame">
+  <div class="cabin-class-label"><i>{{layout.cabinClass}} class</i></div>
+  <div *ngFor="let row of layout.numRows" class="row">
+    <div *ngFor="let letter of layout.layout" [ngClass]="assignSeatStyle(layout.cabinClass, row, letter)"
+          (click)="mouseClick(layout.cabinClass, row, letter, $event)">
+        {{letter !== ' ' ? (row)+letter : ''}}
+    </div>
+  </div>
+</div>
+
+
+<div class="error-message" *ngIf="errorMessage.length !== 0">
+  <span>{{errorMessage}}</span>
+</div>

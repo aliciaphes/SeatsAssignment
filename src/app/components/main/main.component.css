@@ -1,0 +1,106 @@
+
+.frame {
+  width: 550px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-top: 4px;
+
+  /* the following is centering horizontally: */
+  /* margin: 0 auto;  means top and bottom 0, right and left auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.row {
+  height: 35px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.aisle {
+  width:  35px;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px; /* the same as div height */
+}
+
+
+.seat{
+  width:  35px;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  margin-right: 10px;
+}
+
+
+.selected {
+  background-color: #e83697;
+}
+.selected:hover{
+  cursor: pointer;
+}
+
+.available {
+  background-color: #1a60e8;
+}
+.available:hover {
+    cursor: pointer;
+}
+
+
+.occupied {
+  background-color: #dcdddf;
+}
+.occupied:hover {
+    cursor: not-allowed;
+}
+
+
+.cabin-class-label{
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.selected-seat-label{
+  font-size: 13;
+  font-weight: 700;
+}
+
+
+.legend{
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.selected-seat-value{
+  border-radius: 50%;
+  width:  40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+
+.error-message{
+  margin: 2em;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: .75rem 1.25rem;
+  float: left;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
