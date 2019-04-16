@@ -26,7 +26,7 @@
   <div class="cabin-class-label"><i>{{layout.cabinClass}} class</i></div>
   <div *ngFor="let row of layout.numRows" class="row">
     <div *ngFor="let letter of layout.layout" [ngClass]="assignSeatStyle(layout.cabinClass, row, letter)"
-          (click)="mouseClick(layout.cabinClass, row, letter, $event)">
+          (click)="selectDeselectSeat(layout.cabinClass, row, letter, $event)">
         {{letter !== ' ' ? (row)+letter : ''}}
     </div>
   </div>

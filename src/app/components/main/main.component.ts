@@ -144,7 +144,7 @@ export class MainComponent implements OnInit {
 
 
 
-  mouseClick(cabinClass: string, row: number, letter: string, event: MouseEvent) {
+  selectDeselectSeat(cabinClass: string, row: number, letter: string, event: MouseEvent) {
     const currentTarget = event.currentTarget as HTMLElement;
 
     if (currentTarget.classList.contains('available')) {
