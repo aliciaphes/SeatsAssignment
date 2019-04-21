@@ -42,6 +42,9 @@ export class MainComponent implements OnInit {
       this.planeLayout = new Map();
 
       // group the data from the input JSON file into cabin classes in the Map
+      // as follows:
+      // <"Business": <13: <C: true, B: false, ...>, 14: <...> >,
+      // "First": <...> >
       this.setUpSeatMap(data);
 
       // for every cabin class, find out the layout using the seat letters to identify the aisles
