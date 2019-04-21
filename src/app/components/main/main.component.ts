@@ -59,7 +59,7 @@ export class MainComponent implements OnInit {
 
 
 
-  setUpSeatMap(data) {
+  setUpSeatMap(data: any[]) {
     data.forEach(slot => {
       const slotClass = slot.class;
       let seats: Map<number, any>;
@@ -130,7 +130,7 @@ export class MainComponent implements OnInit {
   // determine CSS styling for every seat
   // 'seat' is the square
   // the rest of classes are the colors from the legend
-  assignSeatStyle(cabinClass, index, letter) {
+  assignSeatStyle(cabinClass: string, index: number, letter: string) {
     const seatClass = 'seat ';
     if (letter === ' ') {
       return seatClass + 'aisle';
